@@ -8,6 +8,7 @@
       <div>
         <button
             class="btn"
+            style="margin-right: 15px;"
             @click="completeTask(task)">
           Завершить
         </button>

@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <TaskCreation :task="task"></TaskCreation>
-    <TaskList :task="task"></TaskList>
+    <div class="app">
+      <div class="title">
+        <h1>Список задач</h1>
+      </div>
+      <TaskCreation :task="task"></TaskCreation>
+      <TaskList :task="task"></TaskList>
+    </div>
   </div>
 </template>
 
@@ -32,12 +37,27 @@ export default {
   box-sizing: border-box;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  width: 65%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .btn {
   align-self: flex-end;
   padding: 10px 15px;
   background: none;
   color: teal;
   border: 1px solid teal;
-  margin-left: 15px;
 }
 </style>
